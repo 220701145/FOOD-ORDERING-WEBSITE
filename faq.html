@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff5733;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+/* Home Button Styles */
+        .home-link {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .home-link:hover {
+            background-color: #e74c3c;
+        }
+        .faq-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* FAQ Accordion */
+        .faq-question {
+            cursor: pointer;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+            font-size: 20px;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #ffcc00;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .active .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a class="home-link" href="home_page.html">Home</a>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-section">
+            <div class="faq-question">1. How do I place an order?</div>
+            <div class="faq-answer">
+                <p>To place an order, simply browse our menu, select the items you want, and click "Add to Cart." Once you're ready, proceed to checkout, enter your delivery details, and confirm your order. You can pay via credit/debit card, net banking, or choose cash on delivery.</p>
+            </div>
+
+            <div class="faq-question">2. What areas do you deliver to?</div>
+            <div class="faq-answer">
+                <p>We currently deliver across all major areas in the city. To check if we deliver to your area, simply enter your address during checkout or check our delivery zones page.</p>
+            </div>
+
+            <div class="faq-question">3. What are the delivery charges?</div>
+            <div class="faq-answer">
+                <p>Delivery charges vary based on your location and the restaurant you're ordering from. However, we often have promotions that include free delivery for certain orders. Check the promotions section for ongoing offers.</p>
+            </div>
+
+            <div class="faq-question">4. How long does delivery take?</div>
+            <div class="faq-answer">
+                <p>Delivery times vary based on your location and the time of day. Typically, deliveries take 30-45 minutes. You will receive an estimated delivery time when you place your order.</p>
+            </div>
+
+            <div class="faq-question">5. What if my order is late?</div>
+            <div class="faq-answer">
+                <p>If your order is running late, don't worry! You can track your delivery in real-time through our app. In case of significant delays, you can also reach out to our customer support team for assistance.</p>
+            </div>
+
+            <div class="faq-question">6. Can I cancel my order?</div>
+            <div class="faq-answer">
+                <p>Orders can be canceled within a few minutes of placing them, as long as the restaurant has not started preparing the food. To cancel, go to your order history and click "Cancel Order."</p>
+            </div>
+
+            <div class="faq-question">7. What if I receive the wrong order?</div>
+            <div class="faq-answer">
+                <p>If you receive an incorrect order, please contact our support team immediately, and we will arrange for a replacement or refund.</p>
+            </div>
+
+            <div class="faq-question">8. How do I contact customer support?</div>
+            <div class="faq-answer">
+                <p>You can contact our customer support team via the "Help" section in the app or call our helpline number for immediate assistance.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Script to handle FAQ toggle
+        document.querySelectorAll('.faq-question').forEach((question) => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+    
+                // If the answer is currently displayed, hide it. Otherwise, show it.
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
